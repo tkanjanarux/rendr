@@ -26,9 +26,9 @@ function Fetcher(options) {
 }
 
 Fetcher.prototype.buildOptions = function(additionalOptions, params) {
-  var options = {app: this.app, parse: true};
+  var options = {app: this.app, parse: true, params: {}};
   _.defaults(options, additionalOptions);
-  _.defaults(options, params);
+  _.defaults(options.params, params);
   return options;
 };
 
